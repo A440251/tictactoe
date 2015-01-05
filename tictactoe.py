@@ -1,8 +1,6 @@
 """
 Welcome to Tic Tac Toe!
 
-Dictionary taken from http://thepixiepit.co.uk/scrabble/CSW12.txt
-
 Please input an answer:
 
 An answer of "!STARTAI" will play against the computer.
@@ -10,7 +8,12 @@ An answer of "!START2P" will start a game for two players.
 An answer of "!QUIT" will quit the game.
 
 """
-
+#Version 0.2
+#TODO:
+#split game logic from input-output logic
+#Add a gamestate class that allows for simplification
+#Get rid of if/else blocks and instead use a tuple with dictionary or
+#board = do_move(board, "X", (1, 1))
 def draw_board(board):
     print()
     print((" %s | %s | %s ") % (board[0][0], board[0][1], board[0][2]))
@@ -54,7 +57,6 @@ def START_AI():
     print("Computer AI is being worked on!")
 def START_2P():
     board_state = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-    print(board_state)
     #While player_turn is True, it is player 1's turn.
     #While player_turn is False, it is player 2's turn.
     player_turn = True
